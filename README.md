@@ -13,7 +13,7 @@ An end-to-end machine learning project — predicting the auction sale price of 
 
 ## 📚 What I Was Learning
 
-Regression on a messy, real-world time series dataset — the kind where most of the work is getting the data into a shape a model will accept at all. Where my [heart disease project](https://github.com/ThaiBenjamin/endtoendheartdisease) was a clean 303-row classification problem, this one is 412,698 rows and 53 columns, with columns that are up to 86% missing and dozens of free-text categorical fields.
+Regression on a messy, real-world time series dataset — the kind where most of the work is getting the data into a shape a model will accept at all. Where my [heart disease project](https://github.com/ThaiBenjamin/end-to-end-heart-disease) was a clean 303-row classification problem, this one is 412,698 rows and 53 columns, with columns that are up to 86% missing and dozens of free-text categorical fields.
 
 The project follows the same 6-step framework:
 
@@ -90,3 +90,10 @@ The split taught me the most. Splitting randomly would have let the model train 
 The tuning result was a useful surprise: the RandomizedSearchCV model scored *worse* than the baseline, because the search ran with `max_samples=10000` while the final model trained on all 401,125 rows. The hyperparameters weren't the bottleneck — the amount of data the model got to see was. Sometimes the biggest win isn't a better search space, it's letting the model see everything.
 
 Finally, wrapping preprocessing in a function was not optional. Applying transformations to the test set by hand produced a column mismatch that only surfaced at prediction time — a good demonstration of why training and inference should run the same code path.
+
+---
+
+## 🔗 Related Projects
+
+- [End-to-End Heart Disease Classification](https://github.com/ThaiBenjamin/end-to-end-heart-disease) — binary classification on clinical patient data
+- [End-to-End Dog Vision](https://github.com/ThaiBenjamin/end-to-end-dog-vision) — 120-class image classification with transfer learning
